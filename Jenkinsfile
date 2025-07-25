@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', git credentialsId: 'github-ssh-master', url: 'git@github.com:amreshsharma199/jenkins-git-integration.git'
+                git branch: 'main', credentialsId: 'github-ssh-master', url: 'git@github.com:amreshsharma199/jenkins-git-integration.git'
             }
         }
         stage('Build') {
